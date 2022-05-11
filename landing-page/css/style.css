@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  color: #006e5a;
+}
+
+#header-img {
+  height: 70px;
+  align-items: flex-end;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-right: 15px;
+}
+
+.nav-bar {
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.nav-bar a {
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  color: #6bbd58;
+}
+
+.nav-list {
+  list-style-type: none;
+}
+
+.nav-list,
+.nav-link {
+  display: flex;
+  padding: 20px 10px;
+}
+
+@media all and (max-width: 480px) {
+  .nav-bar {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .nav-list,
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-name {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.feature-row {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#feature {
+  margin-top: 140px;
+}
+
+.feature-col,
+#awards,
+#subscribe,
+#product-id {
+  margin-left: 80px;
+  margin-right: 80px;
+  padding-top: 10px;
+}
+
+p {
+  padding-top: 0px;
+  font-size: 18px;
+}
+
+#subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="email"] {
+  width: 100%;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  margin-top: 10px;
+  height: 30px;
+  border-radius: 20px;
+  background: #006e5a;
+  color: white;
+}
+
+.video-player {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-name {
+  background-color: #f1f1f1;
+  color: #006e5a;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #006e5a;
+  border-radius: 5px;
+  width: 33.33%;
+  padding: 20px 0;
+}
+
+.product-name li {
+  list-style-type: none;
+}
+
+#footer {
+  text-align: center;
+  color: white;
+  background-color: #006e5a;
+  padding-top: 20px;
+  margin-top: 10px;
+  height: 50px;
+}

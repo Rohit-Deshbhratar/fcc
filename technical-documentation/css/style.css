@@ -1,0 +1,83 @@
+body {
+    font-family: Adelle, Roboto Slab, DejaVu Serif, Georgia, Times New Roman, sans-serif;
+}
+
+/*Left Menu*/
+#navbar {
+    height: 100%;
+    min-width: 270px;
+    width: 320;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-right: 2px solid orange;
+}
+
+#navbar li {
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+    padding: 10px 0px;
+    border-top: 2px solid orange;
+}
+
+#navbar a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    margin-left: 20px;
+}
+
+#navbar ul {
+    width: 100%;
+    padding: 0px;
+}
+
+header {
+    text-align: center;
+    margin: 10px;
+    font-weight: 600;
+}
+
+/*Description in right side*/
+#main-doc {
+    margin-left: 300px;
+ }
+
+#main-doc header {
+    text-align: left;
+    margin: 15px;
+}
+
+/*Code tag*/
+code {
+    background-color: #b4b4b4;
+    color: brown;
+    font-size: 15px;
+    margin-left: 40px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+b {
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 600px) {
+    #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 295px;
+        border-bottom: 2px solid orange;
+    }
+
+    #main-doc {
+        position: relative;
+        margin-left: 0;
+        margin-top: 300px;
+        padding-top: 15px;
+    }
+}

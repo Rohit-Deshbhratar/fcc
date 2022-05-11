@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Rohits Resume</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--NAVBAR STARTS-->
+        <div class="nav-bar">
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a href="#welcome-section">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#projects">PROJECTS</a>
+                    </li>
+                    <li>
+                        <a href="#profile">PROFILE</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--NAVBAR ENDS-->
+        <!--WELCOME SECTION STARTS-->
+        <section id="welcome-section">
+            <h1>Hi, I'm Rohit Deshbhratar</h1>
+            <p>Aspiring Fullstack Web Developer</p>
+        </section>
+        <!--WELCOME SECTION ENDS-->
+        <!--PROJECT SECTION STARTS-->
+        <section id="projects">
+            <h1>My Projects</h1>
+            <div class="grid-container">
+                <a href="https://codepen.io/rohit_deshbhratar/details/oNGJjLy" target="_blank">
+                    <div class="project-tile">
+                        <h4>Tribute Page</h4>
+                    </div>
+                </a>
+        
+                <a href="https://codepen.io/rohit_deshbhratar/full/jOGXQyb" target="_blank">
+                    <div class="project-tile">
+                        <h4>Survey Form</h4>
+                    </div>
+                </a>
+        
+                <a href="https://codepen.io/rohit_deshbhratar/full/LYzwRYZ" target="_blank">
+                    <div class="project-tile">
+                        <h4>Technical <br>Documentation</h4>
+                    </div>
+                </a>
+        
+                <a href="https://codepen.io/rohit_deshbhratar/full/qBPGvaE" target="_blank">
+                    <div class="project-tile">
+                        <h4>Product <br>Landing Page</h4>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!--PROJECTS SECTION END-->
+        <!--PROFILE SECTION STARTS-->
+        <!--PROFILE Section-->
+        <section id="profile">
+            <h1>My Profiles</h1>
+            <div class="profile-container">
+                <a href="https://www.freecodecamp.org/learn/responsive-web-design/" id="profile-link" target="_blank">
+                    <div class="profiles">
+                        <img src="icons/freecodecamp_icon.png" alt="fcc">
+                    </div>
+                </a>
+                
+                <a href="https://www.twitter.com" id="profile-link" target="_blank">
+                    <div class="profiles">
+                        <img src="icons/twitter_icon.png" alt="twitter">
+                    </div>
+                </a>
+                
+                <a href="https://www.github.com" id="profile-link" target="_blank">
+                    <div class="profiles">
+                        <img src="icons/github_icon.png" alt="github">
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!--PROFILE SECTION ENDS-->
+        <!--CONTACT SECTION STARTS-->
+        <section id="contact" class="contact-form">
+            <div class="contact-right">
+                <h1>For Business Contact Here.</h1>
+                <form action="#">
+                    <!--Name-->
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="full-name">Full Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="full-name" required>
+                        </div>
+                    </div>
+                    
+                    <!--Email-->
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="">Email</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="email" required>
+                        </div>
+                    </div>
+
+                    <!--Subject Details-->
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="details">Details</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea name="details" id="details" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <!--Submit-->
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="submit"></label>
+                        </div>
+                        <div class="col-75">
+                            <input type="submit" id="submit" value="SUBMIT">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!--CONTACT SECTION ENDS-->
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>

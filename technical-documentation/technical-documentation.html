@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Git Documentation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--Left Menu Bar-->
+        <nav id="navbar">
+            <header>Git Documentation</header>
+            <ul>
+                <li>
+                    <a href="#Introduction" class="nav-link">Introduction</a>
+                </li>
+                <li>
+                    <a href="#Installation" class="nav-link">Installation</a>
+                </li>
+                <li>
+                    <a href="#Repositories" class="nav-link">Repositories</a>
+                </li>
+                <li>
+                    <a href="#The_three_states_of_Git" class="nav-link">The three states of Git</a>
+                </li>
+                <li>
+                    <a href="#Main_sections_of_Git_Project" class="nav-link">Main sections of Git Project</a>
+                </li>
+                <li>
+                    <a href="#Git_Branches" class="nav-link">Git Branches</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Main Contents of Left Menu-->
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article>
+                    <p>Git is a version controlling software, which allows us to track progress of files or projects over the time. Git allows us to distribute changes over the time chronologically.</p>
+
+                    <p>Git is not first Version Controlling Software (VCS), there were mamy software available like BitKeeper, Mercurial, Monotone, CVS, SVN etc.</p>
+
+                    <b>A short history of Git</b>
+                    <p>Git was designed by Linus Torvald, who designed Linux kernel.</p>
+                    <p>In 2005, the relationship between commuity that developed Linux kernel and the commertial company that devloped version controlling software (BitKeeper) broke down. The tool's status was free of charge which was revoked. This is the reason why Git was developed.</p>
+
+                    <p>Goals of the new version controlling system wre asfollows:</p>
+                    <p>
+                        <ul>
+                            <li>speed</li>
+                            <li>Simple Design</li>
+                            <li>Strong support for non lineardevelopment</li>
+                            <li>Fully distributed</li>
+                            <li>Able to handle large projects.</li>
+                        </ul>
+                    </p>
+                    <b>Advantages of Git</b>
+                    <p>
+                        <ul>
+                            <li>Prevent against data loss.</li>
+                            <li>Manage complex projects.</li>
+                            <li>Distribute your file changes over the time.</li>
+                            <li>Distibuted repository model.</li>
+                            <li>Compatible with existing systems and protocol.</li>
+                        </ul>
+                    </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Installation">
+                <header>Installation</header>
+                <article>
+                    <p>Git can be installed on any operating syatems. Here we will see the installation process of Git in Ubuntu 18.04.</p>
+
+                    <p><b>Step 1:</b></p>
+                    <code>$ sudo apt update</code>
+
+                    <p><b>Step 2:</b></p>
+                    <code>$ sudo apt install git</code>
+
+                    <p>Now Git has been installed, to verify check version of Git.</p>
+                    <p><b>Step 3:</b></p>
+                    <code>$ git --version</code>
+                    <p>Output of command mentioned above will show you installed version of Git.</p>
+
+                    <p>Configure Git</p>
+                    <p><b>Step 4:</b> Configure user name</p>
+                    <code>$ git config --global user.name "user_name"</code>
+
+                    <p><b>Step 5: </b>Configure email address</p>
+                    <code>$ git config --global user.email "your_email"</code>
+
+                    <p><b>Step 6: </b>Editing configuring file</p>
+                    <code>$ nano ~/.gitconfig</code>
+                    <p>This step is used to configure user name and email address.</p>
+                </article>
+            </section>
+            
+            <section class="main-section" id="Repositories">
+                <header>Repositories</header>
+                <p>Git repository contains collection of files and different versions of project. This repository tracks all the changes made to files in your project, building history over time.</p>
+                <p>Repositories are also known as 'repos'. Reositories stored on local machine are called aas local repositories and repositories stored on server are called as remote repositories.</p>
+
+                <p><b>Repository vs Directories</b></p>
+                <p>A repository include all previous changes whereas directories store projects at their current state in time.</p>
+
+                <p><b>Creating a repository</b></p>
+                <p>There are two ways to create Git repositories.</p>
+                <p>
+                    <ol>
+                        <li>Import existing project into Git.</li>
+                        <li>Clone an existing Git repository from another server.</li>
+                    </ol>
+                </p>
+                <p><b>Import existing project into Git</b></p>
+                <p><b>Step 1: </b>Goto project folder, right click on empty area select "open in terminal" <b>OR</b> Open terminal and move to project folder.</p>
+                
+                <p><b>Step 2: </b>After moving to project folder from terminal type following command</p>
+                <code>$ git init</code>
+                <p><b>NOTE: </b>This step is irreversible.</p>
+                <p>When above mentioned command is executed ".git" folder is created in your project folder which store all information/status of your project.</p>
+
+                <p><b>Step 3:</b> Moving to staging area. Use following command.</p>
+                <p><code>$ git status</code></p>
+                <p>To add files in staging area use following command.</p>
+                <p><code>$ git add "file-name"</code> OR</p>
+                <p><code>$ git add .</code></p>
+                <p>The first command will add a single file to staging area.</p>
+                <p>The second command will add multiple files to staging area.</p>
+
+                <p>If you want to unstage or remove a file from staging area then</p>
+                <p><code>$ git rm -f "file-name"</code> OR</p>
+                <p><code>$ git rm "file-name"</code></p>
+                <p>It deletes file from project permenantly</p>
+                <p>If you want to keep a file in a project but do not want to track then</p>
+                <p><code>$ git rm --cashed "file-name"</code></p>
+
+                <p><b>Step 4:</b> Commit</p>
+                <p><code>$ git commit -m</code> OR</p>
+                <p><code>$ git commit -a -m "message"</code></p>
+                <p>After this step all the files are commited.</p>
+                <p><code>$ git log</code></p>
+                <p>This command shows all the commit done by you on your project.</p>
+                
+                <p><b>Clone an existing Git repository from another server</b></p>
+                <p><code>$ git clone</code></p>
+                <p>This command receives full copy of all data that the server has. The "URL" includes a directory name and all files of project. If you want to clone repository in otherfolder then</p>
+                <p><code>$ git clone "url" "folder-name"</code></p>
+            </section>
+            
+            <section class="main-section" id="The_three_states_of_Git">
+                <header>The three states of Git</header>
+                <p>Git has three main states that your files can resides in: <code>commited, modified, staged.</code></p>  
+                <p><u>Committed:</u> Data is safely stored in local database.</p>
+                <p><u>Modified:</u> You have changed the file but have not committed it to your database yet.</p>
+                <p><u>Staged:</u> You have marked a modified files inits current version to go into your next commit snapshot.</p>
+            </section>
+            
+            <section class="main-section" id="Main_sections_of_Git_Project">
+                <header>Main sections of Git Project</header>
+                <p><b>Git Directory</b></p>
+                <p>The Git directory stroes metadata and object database foryour project. Git directory is copied when you clone a repository from another computer.</p>
+
+                <p><b>Working Directory</b></p>
+                <p>Files in working directory are pulled out of the compressed database in the git directory and placed on disk for you to use or modify.</p>
+
+                <p><b>Staging Area</b></p>
+                <p>Staging area is a file, generally contained in your git directory. It stores the information about what will go into your next commit.</p>
+            </section>
+            
+            <section class="main-section" id="Git_Branches">
+                <header>Git Branches</header>
+                <p>Git branches are a way to create separate development path without overriding or creating copies of your project.</p>
+                <p>Branches can be added, deleted and merged. Tahe main branch is known as "master". Master branch is created when you commit for first time.</p>
+
+                <p><b>Working of a Git branch</b></p>
+                <p>When you make a "commit" Git stores commit object. This object contain name and email of author, message that you typed and a pointer to the commit. When we stage a file each file is checksum, stores that version of file in git repository. Git refer to this as <i>blob</i> and add checksum to staging area.</p>
+                <p>When we <i>commit</i>, Git checksums each subdirectory and stores tree object in Git repository. Git then creates commit object which contains metadata and pointer to the root project tree so it can re-create that snapshot when needed.</p>
+                <p>Git repository now comtains 1 blob for the content of each of your files, 1 tree that list the content of directory and specifies which files are atored as which blob and 1 commit with pointer to root tree and all the commit metadata.</p>
+
+                <p><b>Creating new branch.</b></p>
+                <p>Before creating a new branch in your project development you must have <i>commit</i> first time. This initial <i>commit</i> will create <i>master</i> branch. Now we will create</p>
+                 <p><code>$ git branch "name-f-branch"</code> OR</p>
+                 <p><code>$ git checkout -b "name-of-branch"</code></p>
+                 <p>First command creates a new branch. Second command creates and switches to newly creates branch.</p>
+
+                 <p>Switching back to master branch</p>
+                 <p><code>$ git checkout master</code></p>
+                 <p>Listing all the branches of your project.</p>
+                 <p><code>$ git branch -a</code></p>
+                 <p><code>-a</code> = all branches and<code>*</code> = indicates branch you are currently on.</p>
+
+                 <p>Deleting a branch.</p>
+                 <p><code>$ git branch -d "name-of-branch"</code></p>
+
+                 <p>Merging a branch</p>
+                 <p><code>$ git merge "message/branch-name"</code></p>
+                 <p>This process is difficult sometimes. Is merging fails then resolve each file manually.</p>
+                 <p><code>$ git add "file-name"</code></p>
+                 <p>Staging a file marks it as resolved on Git. You can use graphical tool instead of command line.</p>
+                 <p><code>$ git mergetool</code></p>
+
+                 <p>Use following command to list which branches are merged in branch you are currently on.</p>
+                 <p><code>$ git branch --merged</code> and</p>
+                 <p><code>$ git --nomerged</code> To list which branches that haven't merged yet.</p>
+            </section>
+        </main>
+    </body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>

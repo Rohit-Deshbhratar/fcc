@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Survey Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 id="title">Students Survey Form</h1>
+      <p id="description">Help Us To Improve By Submitting Form</p>
+    </header>
+
+    <form id="survey-form">
+      <!--Name-->
+      <div class="survey">
+        <label id="name-label">Name:
+          <input class="input" type="text" id="name" placeholder="Enter your name" required>
+        </label>
+      </div>
+
+      <!--Email-->
+      <div class="survey">
+        <label id="email-label">Email:
+          <input class="input" type="email" id="email" required placeholder="Enter your email">
+        </label>
+      </div>
+
+      <!--Age-->
+      <div class="survey">
+        <label id="number-label">Age:
+          <input class="input" type="number" id="number" placeholder="Enter your age" min="10" max="99">
+        </label>
+      </div>
+
+      <!--Dropdown-->
+      <div class="survey">
+        <label>Select Your Role:
+          <select id="dropdown">
+            <option disabled selected>Select Your Role</option>
+            <option value="student">Student</option>
+            <option value="employee">Employee</option>
+            <option value="teacher">Teacher</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+      </div>
+
+      <!--Radio Buttons-->
+      <div class="survey">
+        <label>Are you happy with our teaching?</label>
+        <label><input type="radio" id="yes" name="choice" value="yes"> Yes</label>
+        <label><input type="radio" id="no" value="no" name="choice"> No</label>
+        <label><input type="radio" id="not-sure" value="not-sure" name="choice"> Not Sure</label>
+      </div>
+
+      <!--Checkboxes-->
+      <div class="survey">
+        <label>Which course will you recommend to your friend?</label>
+        <label><input type="checkbox" id="c" name="courses" value="c"> C</label>
+        <label><input type="checkbox" id="cpp" value="cpp"> C++</label>
+        <label><input type="checkbox" id="java" value="java" name="courses"> Java</label>
+        <label><input type="checkbox" id="python" value="python" name="courses"> Python</label>
+        <label><input type="checkbox" id="web-dev" value="web-development" name="courses"> Web Development</label>
+        <label><input type="checkbox" id="back-end" value="back-end-development" name="courses"> Back End Development</label>
+      </div>
+
+      <!--Textarea-->
+      <div class="survey">
+        <label>Comments:</label>
+        <textarea id="textarea" rows="5" cols="30" placeholder="Enter your comments here..."></textarea>
+      </div>
+
+      <!--Submit-->
+      <div class="survey">
+        <input type="submit" id="submit" value="SUBMIT">
+      </div>
+    </form>
+  </div>  
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
